@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="library/AppleJavaExtensions.jar"/>
+	<classpathentry kind="lib" path="library/asm-debug-all.jar"/>
+	<classpathentry kind="lib" path="library/jinput.jar"/>
+	<classpathentry kind="lib" path="library/laf-plugin-7.2.1.jar"/>
+	<classpathentry kind="lib" path="library/laf-widget-7.2.1.jar"/>
+	<classpathentry kind="lib" path="library/log4j-api-2.0-beta9.jar"/>
+	<classpathentry kind="lib" path="library/lwjgl_test.jar"/>
+	<classpathentry kind="lib" path="library/lwjgl_util_applet.jar"/>
+	<classpathentry kind="lib" path="library/lwjgl_util.jar"/>
+	<classpathentry kind="lib" path="library/lwjgl-debug.jar"/>
+	<classpathentry kind="lib" path="library/lwjgl.jar">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="Game01/natives"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="library/lzma.jar"/>
+	<classpathentry kind="lib" path="library/substance-7.2.1.jar"/>
+	<classpathentry kind="lib" path="library/trident-7.2.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Chen/Downloads/slick-util.jar/slick-util.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
