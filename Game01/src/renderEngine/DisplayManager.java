@@ -21,7 +21,7 @@ public class DisplayManager {
 
         try {
             Display.setDisplayMode(new DisplayMode(WIDTH, HEIGHT));
-            Display.setInitialBackground(1.0f, 1.0f, 1.0f);
+            Display.setInitialBackground(1.0f, 1.0f, 1.0f); //  Display background colot
             
             Display.create(new PixelFormat(), attribs);
         } catch (LWJGLException e) {
@@ -35,7 +35,7 @@ public class DisplayManager {
     public static void updateDisplay() {
         Display.sync(FPS);
         // White backgrournd
-        GL11.glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
+        GL11.glClearColor(1.0f, 0f, 0f, 1.0f);
         Display.update();
     }
 

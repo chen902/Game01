@@ -4,9 +4,11 @@ import org.lwjgl.input.Keyboard;
 import org.lwjgl.opengl.Display;
 import org.lwjgl.util.vector.Vector3f;
 
+
 import entities.Camera;
 import entities.Entity;
 import entities.Light;
+import java.util.Random;
 import models.RawModel;
 import models.TexturedModel;
 import renderEngine.DisplayManager;
@@ -19,6 +21,8 @@ import textures.ModelTexture;
 public class Main {
 
     public static void main(String[] args) {
+        
+        Random random = new Random();
         
         DisplayManager.createDisplay();
 
@@ -33,10 +37,10 @@ public class Main {
         TexturedModel texturedModel = new TexturedModel(model, texture);
         
         texture.setShineDamper(10);
-        texture.setReflectivity(1);
+        texture.setReflectivity(0);
 
         Entity entity = new Entity(texturedModel, new Vector3f(0, 0, -30), 0, 0, 0, 1);
-        Light light = new Light(new Vector3f(0,0,-20), new Vector3f(0.2f,1,1));
+        Light light = new Light(new Vector3f(0,0,-20), new Vector3f(1,1,1));
         Camera camera = new Camera();
 
         while (!Display.isCloseRequested()) {
