@@ -22,24 +22,28 @@ public class Main {
 
     public static void main(String[] args) {
         
-        Random random = new Random();
-        
         DisplayManager.createDisplay();
 
         Loader loader = new Loader();
         StaticShader shader = new StaticShader();
         Renderer renderer = new Renderer(shader);
 
-        //RawModel model = loader.loadToVAO(vertices, textureCoords, indices);
+        //Read vertices, texture and normal data from obj file and create a model
         RawModel model = OBJLoader.loadObjModel("plane", loader);
+        
+        //Loads texture file
         ModelTexture texture = new ModelTexture(loader.loadTexture("plane_texture"));
         
+        //Links a RawModel with a Texture object
         TexturedModel texturedModel = new TexturedModel(model, texture);
         
         texture.setShineDamper(10);
         texture.setReflectivity(0);
 
+        //New model's position in the "world"
         Entity entity = new Entity(texturedModel, new Vector3f(0, 0, -30), 0, 0, 0, 1);
+        
+        // Light source's           location and           colour
         Light light = new Light(new Vector3f(0,0,-20), new Vector3f(1,1,1));
         Camera camera = new Camera();
 
